@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Magic</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="heart-container"></div>
+
+    <div id="gatekeeper">
+        <div style="font-size: 100px; cursor: pointer; animation: bounce 2s infinite;" onclick="initSequence()">🎁</div>
+        <p style="color: gold; margin-top: 20px; font-weight: bold;">THERE IS A SURPRISE GIFT FOR YOU RIYUU</p>
+    </div>
+
+    <div id="cake-section">
+        <div class="banner-wrapper">
+            <img class="banner-img" src="C:\Users\ASUS\Documents\birthday\Photo4.jpeg" alt="Banner">
+            <div class="side-lighting"></div>
+        </div>
+        <h2 id="wish-text" style="color: var(--accent-gold); font-size: 1.5rem; text-shadow: 2px 2px 10px #000;">WISH YOU HAPPY BIRTHDAY GOMBE...😘❤️</h2>
+        <div class="cake">
+            <div class="candle"><div class="flame" id="flame"></div></div>
+            <div class="layer tier3"></div>
+            <div class="layer tier2"></div>
+            <div class="layer tier1"></div>
+        </div>
+        <button class="action-btn" onclick="celebrate()">Blow Out the Candle</button>
+    </div>
+
+    <div id="main-content">
+        <h1 class="glossy-birthday">HAPPIEST BIRTHDAY RIYUUU!</h1>
+        <div style="margin-bottom: 20px;">
+            <button class="action-btn" onclick="openModal('video-modal')">🎥 Our Memories</button>
+            <button class="action-btn" onclick="openModal('msg-modal')">Secret Message for you❤️</button>
+        </div>
+        <div class="photo-grid-container">
+            <div class="photo-grid">
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo1.jpeg" alt="Photo 1"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo2.jpeg" alt="Photo 2"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo3.jpeg" alt="Photo 3"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo5.jpeg" alt="Photo 4"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo6.jpeg" alt="Photo 5"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo7.jpeg" alt="Photo 6"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo8.jpeg" alt="Photo 7"></div>
+                <div class="photo-item"><img src="C:\Users\ASUS\Documents\birthday\Photo9.jpeg" alt="Photo 8"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="video-modal" class="modal" onclick="closeModal('video-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <video width="100%" controls><source src="YOUR_VIDEO.mp4"></video>
+        </div>
+    </div>
+
+    <div id="msg-modal" class="modal" onclick="closeModal('msg-modal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2 style="color:gold">✨Oyee Gombeee🥰😚 </h2>
+            <p>Wish youuu a Happiest Birthday Riyuuuu ❤️🫠 I Loveee Youuuuuuu🤌🏻💗🫂 Ivattu ninna special day💟 Firstly Thank youhhh sooo much kanee 😘 nan life alli bandiddakke ninu bandaginda nan life tumba change agide, 🤗❤️ Ninu nan life alli irlilla andidre nan heg irtidno nange gottilla soo Tnkuu kanee 💕🫂 Nan tumba lucky Nin anta hudgi padiyakke, nin yavaglu nan jote irtiya nan ups and downs alli ninu nan jote irtiya🤌🏻❤️🫂 amele nange tumba support madtiya 🥹🫂 yelladru kinta hechagi nanna tumba Preeti matte care madtiyaa 🥺❤️🫂, helbeku andre nan Amman tara ne care madtiya 🫠❤️ Nin tara hudgi sigokke nan punya madini kaneee  😭 
+            <br><br>
+            Ivattina nin special dina Khushi Khushi agi irli🤗💓 Once again Happyyyyy Birthdayyyy mangaaa🐒🐒🐒 I Loveee Youuuuuuu choooo muchhhh,💋😘💗🫂 
+            Nayiii ninuu nanna choose madidakke thank youhh soo much I am very happy with youuu thnku sooo muchh kotiii nan life alli nanna ardangi agi bandidakke👩‍❤️‍👨💌 namige innu madve agilla adru ninu nan hendti nee 🫣😘 
+            <br><br>
+            Once again wish you a Happiest Birthday Riyuuuuuu 🥳😍🤌🏻❤️🫂 
+            I Loveeee Youhhhhhhh 🌍💌🤌🏻❤️🫂
+            Ivattin dina nange tumba special ❤️💋🫂
+            Iduu ninigee onduu small surprise 😜❤️💋🫂
+            Chanag ideee ankotini, Khushi aytaaa?? 🐒💋❤️🫂</p>
+            <button class="action-btn" onclick="closeModal('msg-modal')">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
